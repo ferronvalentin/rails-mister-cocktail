@@ -1,6 +1,6 @@
-<div class="form-card">
-  <%= simple_form_for @dose do |f| %>
-    <%= f.input :name %>
-    <%= f.submit class: 'btn btn-primary' %>
-  <% end %>
-</div>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%#= f.input :ingredient_id, collection: Ingredient.all %>
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
