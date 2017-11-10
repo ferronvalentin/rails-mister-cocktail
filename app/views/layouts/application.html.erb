@@ -8,22 +8,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= cloudinary_js_config %>
   </head>
 
   <%= render 'layouts/navbar' %>
   <body>
     <div class="container">
-
-
-
-
-
     <h1>
      <%= link_to "Mister Cocktail", root_path %>
      <small><%= link_to "new", new_cocktail_path %></small>
    </h1>
     <%= yield %>
-
     </div>
   </body>
 </html>
